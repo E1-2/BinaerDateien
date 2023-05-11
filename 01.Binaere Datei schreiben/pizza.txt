@@ -1,0 +1,5 @@
+
+Pizza Margerita	9
+Pizza Salami	7
+Pizza Fungi	12
+Calzone	14
