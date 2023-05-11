@@ -1,6 +1,3 @@
-// 01. binaere Datei schreiben
-// Blockweises Schreiben von Datensätzen.
-
 #include <iostream> 
 #include <fstream> 
 using namespace std;
@@ -35,9 +32,14 @@ int main() {
 	{
 		for (int i = 0; i < sizeof(pizzaKarte) / sizeof(pizza); i++) {
 			dateipuffer.write((char*) &pizzaKarte[i], sizeof(pizza));
-			// dateipuffer << '\n' << pizzaKarte[i].name << '\t' << pizzaKarte[i].preis; // nicht binaer Formatierung gespeichert
+		    // Daten werden jetzt blockweise geschrieben. 
+			// Ein Block ist in diesem Beispiel 20 Bytes groß. 
+			// Es werden 4 Blöcke geschrieben.
+
+			//dateipuffer << '\n' << pizzaKarte[i].name << '\t' << pizzaKarte[i].preis; // nicht binaer Formatierung gespeichert
 		}
 		dateipuffer.close();
 		return  0;
 	}
 }
+
