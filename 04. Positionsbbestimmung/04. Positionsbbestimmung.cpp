@@ -29,8 +29,8 @@ int main() {
 		cout << "Dateizeiger auf Position: " << pos1 << endl;
 
 		dateipuffer.read((char*)&pizzaKarte[0], sizeof(pizza));
-		// neue Schreibweise: reinterpret_cast<char*>(&pizzaKarte[0]) 
-		// alte Schreibweise: (char*)&pizzaKarte[0]   Bleiben wir mal beim Alten. 
+	  // neue Schreibweise: reinterpret_cast<char*>(&pizzaKarte[0]) 
+	  // alte Schreibweise: (char*)&pizzaKarte[0]   Bleiben wir mal beim Alten. 
 
 		int pos2 = dateipuffer.tellg();
 		cout << "Dateizeiger auf Position: " << pos2 << endl;
@@ -44,5 +44,6 @@ int main() {
 		return  0;
 	}
 }
+
 
 

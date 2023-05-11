@@ -10,7 +10,7 @@ int main() {
 	// Datensatz-Struktur: 
 	struct pizza {
 		char name[16];	// 16 Byte
-		int preis;	//  4 Byte 
+		int preis;		//  4 Byte 
 	};
 	// 20 Bytes gesamt = 16 Bytes für 15 Buchstaben + binäre Null und 4 Bytes für ein Integer
 	cout << sizeof(pizza) << " Bytes - Struktur Pizza" << endl;

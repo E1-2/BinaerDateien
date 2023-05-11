@@ -24,6 +24,7 @@ int main() {
 		// Von der Datei in die Sturktur:
 		for (int i = 0; i < sizeof(pizzaKarte) / sizeof(pizza); ++i) {
 			dateipuffer.read((char*)&pizzaKarte[i], sizeof(pizza));
+			// Daten werden jetzt blockweise gelesen. Ein Block ist in diesem Beispiel 20 Bytes groß.
 		}
 
 		// Konsolenausgabe: 
@@ -35,3 +36,4 @@ int main() {
 		return  0;
 	}
 }
+
