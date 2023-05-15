@@ -37,8 +37,7 @@ int main() {
 		int pos2 = dateipuffer.tellg();
 		cout << "Dateizeiger auf Position: " << pos2 << endl;
 
-		cout << pizzaKarte[0].name << '\t'
-			<< pizzaKarte[0].preis << endl;
+		cout << pizzaKarte[0].name << '\t' << pizzaKarte[0].preis << endl;
 
 		cout << "Verbrauchter Speicher: " << pos2 - pos1 << " Bytes" << endl;
 
