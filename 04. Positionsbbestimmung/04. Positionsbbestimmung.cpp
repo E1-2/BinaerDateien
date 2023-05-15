@@ -19,7 +19,9 @@ int main() {
 	wahl--;
 
 
-	ifstream dateipuffer("../01.Binaere Datei schreiben/pizza.dat", ios::in | ios::binary);
+	ifstream dateipuffer;
+	dateipuffer.open("../01.Binaere Datei schreiben/pizza.dat", ios::in | ios::binary);
+
 	if (!dateipuffer) { cout << "Fehler beim Oeffnen der Datei!" << endl; }
 	else
 	{
@@ -30,7 +32,7 @@ int main() {
 
 		dateipuffer.read((char*)&pizzaKarte[0], sizeof(pizza));
 	  // neue Schreibweise: reinterpret_cast<char*>(&pizzaKarte[0]) 
-	  // alte Schreibweise: (char*)&pizzaKarte[0]   Bleiben wir mal beim Alten. 
+	  // alte Schreibweise: (char*)&pizzaKarte[0]   // Ich empfehle die alte Schreibweise, da sie einfacher für Klausuren ist.
 
 		int pos2 = dateipuffer.tellg();
 		cout << "Dateizeiger auf Position: " << pos2 << endl;

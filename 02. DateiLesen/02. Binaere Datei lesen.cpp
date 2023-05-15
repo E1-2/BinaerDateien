@@ -14,7 +14,9 @@ int main() {
 
 
 	// Daten in die Datei lesen:    
-	ifstream dateipuffer("../01.Binaere Datei schreiben/pizza.dat", ios::in | ios::binary);
+	ifstream dateipuffer;
+	dateipuffer.open("../01.Binaere Datei schreiben/pizza.dat", ios::in | ios::binary);
+
 	if (!dateipuffer)
 	{
 		cout << "Fehler beim Oeffnen der Datei!" << endl;
@@ -33,7 +35,7 @@ int main() {
 		// Konsolenausgabe: 
 		for (int i = 0; i < sizeof(pizzaKarte) / sizeof(pizza); ++i) {
 			cout << pizzaKarte[i].name << '\t'
-				<< pizzaKarte[i].preis;
+				<< pizzaKarte[i].preis << '\n';
 		}
 		dateipuffer.close();
 		return  0;

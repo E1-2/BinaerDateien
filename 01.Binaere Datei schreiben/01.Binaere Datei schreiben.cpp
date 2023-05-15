@@ -23,7 +23,9 @@ int main() {
 	cout << sizeof(pizzaKarte) << " Bytes fuer 4 Datensaetze" << endl;
     
 	// Daten binaer in die Datei schreiben:    
-	ofstream dateipuffer("pizza.dat", ios::out | ios::binary); 
+	ofstream dateipuffer;
+	dateipuffer.open("pizza.dat", ios::out | ios::binary);
+	//ofstream dateipuffer("pizza.dat", ios::out | ios::binary); //  Damit wird ein Konstruktor aufgerufen, der gleich die Datei öffnet. Nicht zu empfehlen,wenn man nicht weiß was ein Konstruktor ist!
 	if (!dateipuffer) 
 	{ 
 		cout << "Fehler beim Oeffnen der Datei!" << endl; 

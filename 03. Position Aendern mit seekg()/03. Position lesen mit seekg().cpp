@@ -25,7 +25,9 @@ int main() {
 	wahl--;
 
 	// Einen Datensatz aus der Datei lesen:    
-	ifstream dateipuffer("../01.Binaere Datei schreiben/pizza.dat", ios::in | ios::binary);
+	ifstream dateipuffer;
+	dateipuffer.open("../01.Binaere Datei schreiben/pizza.dat", ios::in | ios::binary);
+
 	if (!dateipuffer)
 	{
 		cout << "Fehler beim Oeffnen der Datei!" << endl;
