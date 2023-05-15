@@ -33,10 +33,11 @@ int main() {
 		for (int i = 0; i < sizeof(pizzaKarte) / sizeof(pizza); i++) {
 			dateipuffer.write((char*) &pizzaKarte[i], sizeof(pizza));
 		    // Daten werden jetzt blockweise geschrieben. 
-			// Ein Block ist in diesem Beispiel 20 Bytes groß. 
-			// Es werden 4 Blöcke geschrieben.
+			// Ein DatenBlock ist in diesem Beispiel 20 Bytes groß. Nach 16 Bytes kommt der Preis ...
+			// Es werden 4 DatenBlöcke geschrieben.
+			// Der komplette Datenstrom ist 80 Bytes lang.
 
-			//dateipuffer << '\n' << pizzaKarte[i].name << '\t' << pizzaKarte[i].preis; // nicht binaer Formatierung gespeichert
+			// dateipuffer << '\n' << pizzaKarte[i].name << '\t' << pizzaKarte[i].preis; // nicht binaer Formatierung gespeichert
 		}
 		dateipuffer.close();
 		return  0;
