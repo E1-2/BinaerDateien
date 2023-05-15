@@ -25,6 +25,9 @@ int main() {
 		for (int i = 0; i < sizeof(pizzaKarte) / sizeof(pizza); ++i) {
 			dateipuffer.read((char*)&pizzaKarte[i], sizeof(pizza));
 			// Daten werden jetzt blockweise gelesen. Ein Block ist in diesem Beispiel 20 Bytes groß.
+		
+			// neue Schreibweise: reinterpret_cast<char*>(&pizzaKarte[0]) 
+			// alte Schreibweise: (char*)&pizzaKarte[0]   Bleiben wir mal beim Alten. 
 		}
 
 		// Konsolenausgabe: 
