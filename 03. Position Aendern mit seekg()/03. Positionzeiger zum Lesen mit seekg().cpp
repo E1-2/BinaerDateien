@@ -1,3 +1,5 @@
+// 03. Positionzeiger zum Lesen mit seekg()
+
 #include <iostream> 
 #include <fstream> 
 using namespace std;
