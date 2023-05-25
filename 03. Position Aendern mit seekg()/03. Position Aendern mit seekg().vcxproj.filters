@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="03. Position lesen mit seekg%28%29.cpp">
+    <ClCompile Include="03. Positionzeiger zum Lesen mit seekg%28%29.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

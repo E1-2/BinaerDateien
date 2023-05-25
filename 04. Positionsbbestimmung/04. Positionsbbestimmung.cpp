@@ -25,16 +25,16 @@ int main() {
 	if (!dateipuffer) { cout << "Fehler beim Oeffnen der Datei!" << endl; }
 	else
 	{
-		dateipuffer.seekg((sizeof(pizza) * wahl), ios::beg);
+		dateipuffer.seekg((sizeof(pizza) * wahl), ios::beg); // Setzte den lesenden get Positionszeiger auf ... Byte in der Datei
 
-		int pos1 = dateipuffer.tellg();
+		int pos1 = dateipuffer.tellg(); // Auf welcher Position steht er? z.B. 20 Byte
 		cout << "Dateizeiger auf Position: " << pos1 << endl;
 
-		dateipuffer.read((char*)&pizzaKarte[0], sizeof(pizza));
+		dateipuffer.read((char*)&pizzaKarte[0], sizeof(pizza)); // Lese einen Datensatz von 20 Byte
 	  // neue Schreibweise: reinterpret_cast<char*>(&pizzaKarte[0]) 
 	  // alte Schreibweise: (char*)&pizzaKarte[0]   // Ich empfehle die alte Schreibweise, da sie einfacher für Klausuren ist.
 
-		int pos2 = dateipuffer.tellg();
+		int pos2 = dateipuffer.tellg(); // Auf welcher Position steht er? z. B. 40 Byte
 		cout << "Dateizeiger auf Position: " << pos2 << endl;
 
 		cout << pizzaKarte[0].name << '\t' << pizzaKarte[0].preis << endl;
