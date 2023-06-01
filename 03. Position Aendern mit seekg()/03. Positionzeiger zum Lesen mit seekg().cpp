@@ -24,7 +24,7 @@ int main() {
 
 	int wahl = 0;
 	cin >> wahl;
-	wahl--;
+	wahl--; // Achte auf die Umwandlung in Index
 
 	// Einen Datensatz aus der Datei lesen:    
 	ifstream dateipuffer;
