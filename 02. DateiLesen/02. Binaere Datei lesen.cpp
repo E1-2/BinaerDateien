@@ -17,7 +17,7 @@ int main() {
 	ifstream dateipuffer;
 	dateipuffer.open("../01.Binaere Datei schreiben/pizza.dat", ios::in | ios::binary);
 
-	if (!dateipuffer)
+	if (!dateipuffer.is_open())
 	{
 		cout << "Fehler beim Oeffnen der Datei!" << endl;
 	}
@@ -26,7 +26,7 @@ int main() {
 		// Von der Datei in die Sturktur:
 		for (int i = 0; i < sizeof(pizzaKarte) / sizeof(pizza); ++i) {
 			dateipuffer.read((char*)&pizzaKarte[i], sizeof(pizza));
-			// Daten werden jetzt blockweise gelesen. Ein Block ist in diesem Beispiel 20 Bytes groß.
+			// Daten werden jetzt blockweise gelesen. Ein Block ist in diesem Beispiel 20 Bytes groï¿½.
 		
 			// neue Schreibweise: reinterpret_cast<char*>(&pizzaKarte[0]) 
 			// alte Schreibweise: (char*)&pizzaKarte[0]   Bleiben wir mal beim Alten. 

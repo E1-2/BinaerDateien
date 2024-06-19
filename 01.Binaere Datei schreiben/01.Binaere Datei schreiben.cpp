@@ -26,7 +26,7 @@ int main() {
 	ofstream dateipuffer;
 	dateipuffer.open("pizza.dat", ios::out | ios::binary);
 	//ofstream dateipuffer("pizza.dat", ios::out | ios::binary); //  Damit wird ein Konstruktor aufgerufen, der gleich die Datei öffnet. Nicht zu empfehlen,wenn man nicht weiß was ein Konstruktor ist!
-	if (!dateipuffer) 
+	if (!dateipuffer.is_open()) 
 	{ 
 		cout << "Fehler beim Erstellen der Datei!" << endl; 
 	}

@@ -22,7 +22,7 @@ int main() {
 	ifstream dateipuffer;
 	dateipuffer.open("../01.Binaere Datei schreiben/pizza.dat", ios::in | ios::binary);
 
-	if (!dateipuffer) { cout << "Fehler beim Oeffnen der Datei!" << endl; }
+	if (!dateipuffer.is_open()) { cout << "Fehler beim Oeffnen der Datei!" << endl; }
 	else
 	{
 		dateipuffer.seekg((sizeof(pizza) * wahl), ios::beg); // Setzte den lesenden get Positionszeiger auf ... Byte in der Datei

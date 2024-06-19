@@ -30,7 +30,7 @@ int main() {
 	ifstream dateipuffer;
 	dateipuffer.open("../01.Binaere Datei schreiben/pizza.dat", ios::in | ios::binary);
 
-	if (!dateipuffer)
+	if (!dateipuffer.is_open())
 	{
 		cout << "Fehler beim Oeffnen der Datei!" << endl;
 	}
